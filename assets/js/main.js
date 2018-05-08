@@ -31,7 +31,7 @@
     $(window).on('scroll', function () {
         var top = $(window).scrollTop();
 
-        if (top >= 100) {
+        if (top >= 150) {
             $('.page-header .navbar').addClass('sticky');
         } else {
             $('.page-header .navbar').removeClass('sticky');

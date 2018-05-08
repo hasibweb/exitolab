@@ -11,6 +11,7 @@
 
 .page-header .navbar.sticky {
     background: rgba(0, 0, 0, 0.57);
+    transition: .2s ease-in-out;
 }
 
 /* ======= Hero Area ======= */
@@ -109,5 +110,43 @@
 /* Hover */
 
 .about-blocks figure:hover {
+    box-shadow: 0 10px 30px -1px #ddd;
+}
+
+/* ============= Our Services =============== */
+
+#our_services {
+    padding: 50px 0;
+}
+
+.services-blocks {
+    margin-top: 80px;
+}
+
+.services-blocks figure {
+    text-align: center;
+    padding: 60px 0px;
+    transition: .2s ease-in-out;
+}
+
+.services-blocks figure.color {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 10px 30px 2px #ddd;
+}
+
+.services-blocks figure h4,
+.services-blocks figure>img {
+    margin-bottom: 30px;
+}
+
+.services-blocks figure p {
+    margin-bottom: 0px;
+    padding: 0 53px;
+}
+
+/* Hover */
+
+.services-blocks figure:hover {
     box-shadow: 0 10px 30px -1px #ddd
 }

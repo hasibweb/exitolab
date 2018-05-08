@@ -102,8 +102,11 @@ h6 {
     font-weight: bold;
 }
 
-.section-title span {
+.section-title mark {
     color: var(--primary-color);
+    background: transparent;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 0;
 }
 
 /* Preloader */
