@@ -39,7 +39,7 @@
 
 .hero-text p {
     font-size: 18px;
-    width: 80%;
+    width: 85%;
     padding: 1rem;
 }
 
@@ -129,12 +129,6 @@
     transition: .2s ease-in-out;
 }
 
-.services-blocks figure.color {
-    background: var(--primary-color);
-    color: #fff;
-    box-shadow: 0 10px 30px 2px #ddd;
-}
-
 .services-blocks figure h4,
 .services-blocks figure>img {
     margin-bottom: 30px;
@@ -145,8 +139,28 @@
     padding: 0 53px;
 }
 
+/* Service block */
+
+/* .services-blocks .s-block {
+    border-right: 1px solid #e3e3e3;
+} */
+
+.services-blocks .s-block {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+/* .services-blocks .s-block:first-child {
+    border-right: 0 !important;
+} */
+
+.services-blocks .s-block.color {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 10px 30px 2px #ddd;
+}
+
 /* Hover */
 
-.services-blocks figure:hover {
+.services-blocks .s-block:hover {
     box-shadow: 0 10px 30px -1px #ddd
 }

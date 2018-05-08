@@ -22,11 +22,21 @@
     .about-blocks figure {
         padding: 60px 20px;
     }
+    .services-blocks figure p {
+        padding: 0 10px;
+    }
 }
 
 /* ========== Medium and Up ========== */
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .services-blocks .s-block:not(:nth-child(3n)) {
+        border-right: 1px solid #e3e3e3;
+    }
+    .services-blocks .s-block:not(:nth-last-child(-n+3)) {
+        border-bottom: 1px solid #e3e3e3;
+    }
+}
 
 /* ========== Medium and Down ========== */
 
