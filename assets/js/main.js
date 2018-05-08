@@ -75,7 +75,8 @@
     function scrollSpy() {
         var scrollLink = $('.page-header .navbar-nav .nav-link');
         var minusSpace = $('.page-header .navbar-nav').outerHeight();
-        var easign = "easeOutBack";
+        var easing = "easeOutBack";
+
         // Scroll Animation Function
         function scrollAnim(link, space, dur, ease) {
             $('html, body').animate({
@@ -90,14 +91,35 @@
             .on('click', function (e) {
                 e.preventDefault;
                 $(this)
-                    .parent('li')
+                    .parent()
                     .addClass('active')
                     .siblings()
                     .removeClass('active');
                 // call the scrollAnim function
-                scrollAnim(this, minusSpace, 1234, easign);
+                scrollAnim(this, minusSpace, 1234, easing);
+            })
+        // Window Scroll
+        $(window).on('scroll', function () {
+            var topPos = $(window).scrollTop();
+            scrollLink.each(function () {
+                var section = $(this.hash);
+                // This Line Immportant for Console Error
+                if (section.length) {
+                    var secPos = section
+                        .offset()
+                        .top - minusSpace;
+                }
+                // Add Active Class
+                if (secPos <= topPos) {
+                    $(this)
+                        .parent()
+                        .addClass('active')
+                        .siblings()
+                        .removeClass('active');
+                }
             })
 
+        })
     }
 
 })(jQuery); // End of use strict
