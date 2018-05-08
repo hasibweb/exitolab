@@ -9,6 +9,10 @@
     color: var(--primary-color);
 }
 
+.page-header .navbar.sticky {
+    background: rgba(0, 0, 0, 0.57);
+}
+
 /* ======= Hero Area ======= */
 
 .hero-area {
