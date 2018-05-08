@@ -68,6 +68,8 @@
     border: 2px solid var(--primary-color);
     display: inline-block;
     border-radius: 50%;
+    animation: rotates 1s infinite;
+    animation-direction: alternate;
 }
 
 /* Bounce Animation */
@@ -78,6 +80,15 @@
     }
     to {
         transform: translateY(25px);
+    }
+}
+
+@keyframes rotates {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(720deg);
     }
 }
 
