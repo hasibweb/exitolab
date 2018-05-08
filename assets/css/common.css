@@ -62,16 +62,20 @@ h6 {
 /* =================== Customize Bootstrat =================== */
 
 .text-primary {
-    color: #ff960c !important;
+    color: var(--primary-color) !important;
 }
 
 .bg-primary {
-    background: #ff960c !important;
+    background: var(--primary-color) !important;
 }
 
 .btn-primary {
-    background: #ff960c;
-    border-color: #ff960c;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+button.navbar-toggler:focus {
+    outline-color: var(--primary-color);
 }
 
 /* =================== Common Class =================== */

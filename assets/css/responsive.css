@@ -96,3 +96,11 @@
         font-size: 30px;
     }
 }
+
+/* Small to Medium */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .services-blocks .s-block:nth-child(odd) {
+        border-right: 1px solid #e3e3e3;
+    }
+}
