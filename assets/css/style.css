@@ -65,6 +65,8 @@
     border-radius: 50%;
 }
 
+/* Bounce Animation */
+
 @keyframes bounce {
     from {
         transform: translateY(0);
@@ -82,19 +84,6 @@
 
 .about-blocks {
     margin-top: 80px;
-}
-
-.about-blocks .a-block:first-child {
-    padding-right: 30px;
-}
-
-.about-blocks .a-block:nth-child(2) {
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.about-blocks .a-block:last-child {
-    padding-left: 30px;
 }
 
 .about-blocks figure {

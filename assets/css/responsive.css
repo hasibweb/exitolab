@@ -1,14 +1,87 @@
+/* ========== Large and Up ========== */
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1170px;
     }
+    .about-blocks .a-block:first-child {
+        padding-right: 25px;
+    }
+    .about-blocks .a-block:nth-child(2) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .about-blocks .a-block:last-child {
+        padding-left: 25px;
+    }
 }
+
+/* ========== Large and Down ========== */
+
+@media (max-width: 1199px) {
+    .about-blocks figure {
+        padding: 60px 20px;
+    }
+}
+
+/* ========== Medium and Up ========== */
+
+@media (min-width: 992px) {}
+
+/* ========== Medium and Down ========== */
+
+@media (max-width: 991px) {
+    .page-header .navbar-nav {
+        text-align: center;
+        background: var(--primary-color);
+    }
+    .page-header .navbar-nav .nav-item:not(:last-child) .nav-link {
+        border-bottom: 1px solid #ddd;
+    }
+    .page-header .navbar-nav .nav-item.active .nav-link {
+        color: #fff;
+        font-weight: bold;
+    }
+    .about-blocks figure {
+        padding: 60px 30px;
+    }
+    .about-blocks {
+        margin-top: 40px;
+    }
+}
+
+/* ========== Small and Up ========== */
+
+@media (min-width: 768px) {}
+
+/* ========== Small and Down ========== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+    .hero-text p {
+        width: 98%;
+    }
+}
+
+/* ========== Extra Small and Up ========== */
 
 @media (min-width: 576px) {}
 
-@media (max-width: 576px) {
+/* ========== Extra Small and Down ========== */
+
+@media (max-width: 575px) {
     /* common style */
     h1 {
-        font-size: 45px;
+        font-size: 40px;
+    }
+}
+
+/* ========== Mobile Device ========== */
+
+@media (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: 30px;
     }
 }
