@@ -16,13 +16,13 @@
 
 /* ======= Hero Area ======= */
 
-.hero-area {
+#hero-area {
     height: 100vh;
     position: relative;
     background-size: cover;
 }
 
-.hero-area::before {
+#hero-area::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -174,4 +174,54 @@
 
 .services-blocks .s-block:hover {
     box-shadow: 0 10px 30px -1px #ddd
+}
+
+/* ================== Our Portfolio ================== */
+
+#our_portfolio {
+    padding: 50px 0;
+}
+
+.filter-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.filter-grid .filter-item {
+    width: 20%;
+}
+
+.filter-grid .filter-item figure {
+    margin-bottom: 0;
+}
+
+.portfolio-filter .filter-button-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 80px auto;
+}
+
+.portfolio-filter .filter-button-group button {
+    background: transparent;
+    color: #000;
+    border: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.portfolio-filter .filter-button-group button:focus {
+    outline: 0;
+}
+
+.portfolio-filter .filter-button-group button:not(:last-child) {
+    margin-right: 15px;
+}
+
+.portfolio-filter .filter-button-group button.active {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 10px;
 }

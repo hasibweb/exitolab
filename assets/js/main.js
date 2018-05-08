@@ -21,7 +21,8 @@
     // Document Ready Function
     $(document).ready(function () {
         animations();
-
+        servicesFilter();
+        scrollSpy();
     });
 
     // Window Resize Function
@@ -50,6 +51,52 @@
     // ========================== Animations ==========================
     function animations() {
         AOS.init({offset: 50});
+
+    }
+
+    // ========================== Services Filter ==========================
+    function servicesFilter() {
+        // init Isotope
+        var $grid = $('.filter-grid').isotope({
+            // options
+        });
+        // filter items on button click
+        $('.filter-button-group').on('click', 'button', function () {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({filter: filterValue});
+            $(this)
+                .addClass('active')
+                .siblings()
+                .removeClass('active');
+        });
+    }
+
+    // ========================== ScrollSpy ==========================
+    function scrollSpy() {
+        var scrollLink = $('.page-header .navbar-nav .nav-link');
+        var minusSpace = $('.page-header .navbar-nav').outerHeight();
+        var easign = "easeOutBack";
+        // Scroll Animation Function
+        function scrollAnim(link, space, dur, ease) {
+            $('html, body').animate({
+                scrollTop: $(link.hash)
+                    .offset()
+                    .top - space
+            }, dur, ease)
+        }
+
+        // Fire when click
+        scrollLink
+            .on('click', function (e) {
+                e.preventDefault;
+                $(this)
+                    .parent('li')
+                    .addClass('active')
+                    .siblings()
+                    .removeClass('active');
+                // call the scrollAnim function
+                scrollAnim(this, minusSpace, 1234, easign);
+            })
 
     }
 
