@@ -10,7 +10,7 @@ html,
 body {
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
-    color: #333;
+    color: #111;
     background: transparent;
 }
 
@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 h3 {
@@ -48,7 +48,7 @@ h3 {
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 26px;
 }
 
 h5 {
@@ -76,8 +76,14 @@ h6 {
 
 /* =================== Common Class =================== */
 
+/* Text style */
+
 .text-black {
     color: #010101;
+}
+
+.text-blue {
+    color: #314151;
 }
 
 /* Fonts */
@@ -88,6 +94,16 @@ h6 {
 
 .roboto {
     font-family: 'Roboto', sans-serif;
+}
+
+/* Section Style */
+
+.section-title {
+    font-weight: bold;
+}
+
+.section-title span {
+    color: var(--primary-color);
 }
 
 /* Preloader */

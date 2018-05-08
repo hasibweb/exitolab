@@ -43,7 +43,6 @@
 .hero-mouse {
     position: absolute;
     bottom: 100px;
-    cursor: pointer;
 }
 
 .hero-mouse>span {
@@ -73,4 +72,49 @@
     to {
         transform: translateY(25px);
     }
+}
+
+/* ======= About Us ======= */
+
+#about_us {
+    padding: 100px 0 50px;
+}
+
+.about-blocks {
+    margin-top: 80px;
+}
+
+.about-blocks .a-block:first-child {
+    padding-right: 30px;
+}
+
+.about-blocks .a-block:nth-child(2) {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.about-blocks .a-block:last-child {
+    padding-left: 30px;
+}
+
+.about-blocks figure {
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    padding: 60px;
+    transition: .2s ease-in-out;
+}
+
+.about-blocks figure h4,
+.about-blocks figure>img {
+    margin-bottom: 30px;
+}
+
+.about-blocks figure p {
+    margin-bottom: 0px;
+}
+
+/* Hover */
+
+.about-blocks figure:hover {
+    box-shadow: 0 10px 30px -1px #ddd
 }
