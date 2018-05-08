@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* Vendor */
+
+@import './vendor/bootstrap-reboot.min.css';
+@import './vendor/bootstrap.min.css';
+@import './vendor/animate.css';
+/* Plugins */
+
+@import './plugins/slick.css';
+@import './plugins/aos.css';
+/* Library */
+
+@import './lib/css/font-awesome.min.css';
+/* Styles */
+
+@import './common.css';
+@import './style.css';
+/* Responsive */
+
+@import './responsive.css';
