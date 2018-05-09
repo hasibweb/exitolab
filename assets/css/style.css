@@ -230,6 +230,10 @@
     overflow: hidden;
 }
 
+.portfolio-filter .filter-item figure>img {
+    width: 100%;
+}
+
 .portfolio-filter .filter-item figure figcaption {
     position: absolute;
     width: 100%;
