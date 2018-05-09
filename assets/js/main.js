@@ -50,9 +50,7 @@
 
     // ========================== Animations ==========================
     function animations() {
-        AOS.init({
-            offset: 50
-        });
+        AOS.init({offset: 50});
 
     }
 
@@ -65,9 +63,7 @@
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: filterValue
-            });
+            $grid.isotope({filter: filterValue});
             $(this)
                 .addClass('active')
                 .siblings()
@@ -80,6 +76,7 @@
         var scrollLink = $('.page-header .navbar-nav .nav-link');
         var minusSpace = $('.page-header .navbar-nav').outerHeight();
         var easing = "easeOutBack";
+        var timer = 2222;
 
         // Scroll Animation Function
         function scrollAnim(link, space, dur, ease) {
@@ -100,7 +97,7 @@
                     .siblings()
                     .removeClass('active');
                 // call the scrollAnim function
-                scrollAnim(this, minusSpace, 1234, easing);
+                scrollAnim(this, minusSpace, timer, easing);
             })
         // Window Scroll
         $(window).on('scroll', function () {
@@ -124,11 +121,14 @@
             })
 
         })
+
+        // Trigger Icon Button when click menu link
+        scrollLink.on('click', function () {
+            $("#navbarNav").trigger("click");
+        })
     }
 
     // Hover dir
-    $(".snake_dir").snakeify({
-        speed: 300
-    })
+    $(".snake_dir").snakeify({speed: 300})
 
 })(jQuery); // End of use strict

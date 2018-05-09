@@ -159,6 +159,7 @@
 
 .services-blocks .s-block {
     border-bottom: 1px solid #e3e3e3;
+    transition: .2s ease-in-out;
 }
 
 /* .services-blocks .s-block:first-child {
