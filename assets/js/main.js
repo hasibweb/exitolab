@@ -50,7 +50,9 @@
 
     // ========================== Animations ==========================
     function animations() {
-        AOS.init({offset: 50});
+        AOS.init({
+            offset: 50
+        });
 
     }
 
@@ -63,7 +65,9 @@
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({filter: filterValue});
+            $grid.isotope({
+                filter: filterValue
+            });
             $(this)
                 .addClass('active')
                 .siblings()
@@ -121,5 +125,10 @@
 
         })
     }
+
+    // Hover dir
+    $(".snake_dir").snakeify({
+        speed: 200
+    })
 
 })(jQuery); // End of use strict
