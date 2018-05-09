@@ -68,9 +68,10 @@
         // console.log(color)
         $("body").niceScroll({
             cursorcolor: color,
-            cursorwidth: "10px",
+            cursorwidth: "8px",
             cursorborder: '0',
-            scrollspeed: 200
+            scrollspeed: 180,
+            bouncescroll: true
         });
 
     }
@@ -78,7 +79,7 @@
     // ========================== Navbar ==========================
     function navbar() {
         // Trigger Icon Button when click menu link
-        if (!$('.page-header .navbar-toggler').hasClass('collapsed')) {
+        if ($(window).width() < 975) {
 
             $('.page-header .navbar-nav .nav-link')
                 .on('click', function () {
