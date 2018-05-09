@@ -128,7 +128,7 @@
 
     // Hover dir
     $(".snake_dir").snakeify({
-        speed: 200
+        speed: 300
     })
 
 })(jQuery); // End of use strict
