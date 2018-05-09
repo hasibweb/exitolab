@@ -68,7 +68,9 @@
         // console.log(color)
         $("body").niceScroll({
             cursorcolor: color,
-            cursorwidth: "10px"
+            cursorwidth: "10px",
+            cursorborder: '0',
+            scrollspeed: 200
         });
 
     }
