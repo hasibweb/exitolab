@@ -20,7 +20,7 @@
 
     // Document Ready Function
     $(document).ready(function () {
-        animations();
+        pluginsActivation();
         servicesFilter();
         scrollSpy();
         navbar();
@@ -41,6 +41,37 @@
                 $(this).remove();
             });
     } // preloaderSetup
+
+    // ========================== Plugins Activations ==========================
+    function pluginsActivation() {
+        // Scroll Animation
+        AOS.init({
+            offset: 50
+        });
+        // Hover Direction Change
+        $(".snake_dir").snakeify({
+            speed: 300
+        });
+
+        // Magnific Popup
+        $('.m-popup').magnificPopup({
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            type: 'image'
+        });
+
+        // Change Scrollbar Color
+        var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
+        // console.log(color)
+        $("body").niceScroll({
+            cursorcolor: color,
+            cursorwidth: "10px"
+        });
+
+    }
 
     // ========================== Navbar ==========================
     function navbar() {
@@ -66,27 +97,7 @@
         });
 
     }
-    // ========================== Animations ==========================
-    function animations() {
-        AOS.init({
-            offset: 50
-        });
-        // Hover dir
-        $(".snake_dir").snakeify({
-            speed: 300
-        });
 
-        // Magnific Popup
-        $('.m-popup').magnificPopup({
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            },
-            type: 'image'
-        });
-
-    }
 
     // ========================== Services Filter ==========================
     function servicesFilter() {
