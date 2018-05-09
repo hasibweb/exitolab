@@ -1,21 +1,3 @@
-/* ========== Large and Up ========== */
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1170px;
-    }
-    .about-blocks .a-block:first-child {
-        padding-right: 25px;
-    }
-    .about-blocks .a-block:nth-child(2) {
-        padding-right: 25px;
-        padding-left: 25px;
-    }
-    .about-blocks .a-block:last-child {
-        padding-left: 25px;
-    }
-}
-
 /* ========== Large and Down ========== */
 
 @media (max-width: 1199px) {
@@ -24,17 +6,6 @@
     }
     .services-blocks figure p {
         padding: 0 10px;
-    }
-}
-
-/* ========== Medium and Up ========== */
-
-@media (min-width: 992px) {
-    .services-blocks .s-block:not(:nth-child(3n)) {
-        border-right: 1px solid #e3e3e3;
-    }
-    .services-blocks .s-block:not(:nth-last-child(-n+3)) {
-        border-bottom: 1px solid #e3e3e3;
     }
 }
 
@@ -61,10 +32,6 @@
     }
 }
 
-/* ========== Small and Up ========== */
-
-@media (min-width: 768px) {}
-
 /* ========== Small and Down ========== */
 
 @media (max-width: 768px) {
@@ -74,11 +41,15 @@
     .hero-text p {
         width: 98%;
     }
+    /* Filter Item width */
+    .filter-grid .filter-item {
+        width: 50%;
+    }
+    /* filter button margin right */
+    .portfolio-filter .filter-button-group button:not(:last-child) {
+        margin-right: 0px;
+    }
 }
-
-/* ========== Extra Small and Up ========== */
-
-@media (min-width: 576px) {}
 
 /* ========== Extra Small and Down ========== */
 
@@ -91,9 +62,59 @@
 
 /* ========== Mobile Device ========== */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
     h1 {
         font-size: 30px;
+    }
+    /* Filter Item width */
+    .filter-grid .filter-item {
+        width: 100%;
+    }
+}
+
+/* ========== Extra Small and Up ========== */
+
+@media (min-width: 576px) {}
+
+/* ========== Small and Up ========== */
+
+@media (min-width: 768px) {
+    /* Filter Item width */
+    .filter-grid .filter-item {
+        width: 33.333%;
+    }
+}
+
+/* ========== Medium and Up ========== */
+
+@media (min-width: 992px) {
+    .services-blocks .s-block:not(:nth-child(3n)) {
+        border-right: 1px solid #e3e3e3;
+    }
+    .services-blocks .s-block:not(:nth-last-child(-n+3)) {
+        border-bottom: 1px solid #e3e3e3;
+    }
+    /* Filter Item width */
+    .filter-grid .filter-item {
+        width: 20%;
+    }
+}
+
+/* ========== Large and Up ========== */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+    .about-blocks .a-block:first-child {
+        padding-right: 25px;
+    }
+    .about-blocks .a-block:nth-child(2) {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .about-blocks .a-block:last-child {
+        padding-left: 25px;
     }
 }
 

@@ -189,10 +189,6 @@
     width: 100%;
 }
 
-.filter-grid .filter-item {
-    width: 20%;
-}
-
 .filter-grid .filter-item figure {
     margin-bottom: 0;
 }
@@ -202,6 +198,7 @@
     width: 100%;
     justify-content: center;
     margin: 80px auto;
+    flex-wrap: wrap;
 }
 
 .portfolio-filter .filter-button-group button {
