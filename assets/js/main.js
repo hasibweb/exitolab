@@ -112,6 +112,12 @@
                 // call the scrollAnim function
                 scrollAnim(this, minusSpace, 1234, easing);
             })
+        // Fire when Mouse button click
+        $('.hero-mouse').on('click', function (e) {
+            e.preventDefault;
+            // call the scrollAnim function
+            scrollAnim(this, minusSpace, 2234, 'easeOutQuint');
+        })
         // Window Scroll
         $(window).on('scroll', function () {
             var topPos = $(window).scrollTop();
