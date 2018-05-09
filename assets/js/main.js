@@ -62,9 +62,18 @@
     }
     // ========================== Animations ==========================
     function animations() {
-        AOS.init({offset: 50});
+        AOS.init({
+            offset: 50
+        });
         // Hover dir
-        $(".snake_dir").snakeify({speed: 300})
+        $(".snake_dir").snakeify({
+            speed: 300
+        });
+
+        // Magnific Popup
+        $('.m-popup').magnificPopup({
+            type: 'image'
+        });
 
     }
 
@@ -77,7 +86,9 @@
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({filter: filterValue});
+            $grid.isotope({
+                filter: filterValue
+            });
             $(this)
                 .addClass('active')
                 .siblings()

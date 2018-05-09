@@ -4,6 +4,7 @@
 @import './vendor/bootstrap-reboot.min.css';
 @import './vendor/bootstrap.min.css';
 @import './vendor/animate.css';
+@import './plugins/magnific-popup.css';
 /* Plugins */
 
 @import './plugins/slick.css';
