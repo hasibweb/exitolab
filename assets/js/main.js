@@ -23,6 +23,7 @@
         animations();
         servicesFilter();
         scrollSpy();
+        navbar();
     });
 
     // Window Resize Function
@@ -48,9 +49,22 @@
             });
     } // preloaderSetup
 
+    // ========================== Navbar ==========================
+    function navbar() {
+        // Trigger Icon Button when click menu link
+        if ($(window).width() < 992) {
+
+            $('.page-header .navbar-nav .nav-link')
+                .on('click', function () {
+                    $(".page-header .navbar-toggler-icon").trigger("click");
+                })
+        }
+    }
     // ========================== Animations ==========================
     function animations() {
         AOS.init({offset: 50});
+        // Hover dir
+        $(".snake_dir").snakeify({speed: 300})
 
     }
 
@@ -76,7 +90,6 @@
         var scrollLink = $('.page-header .navbar-nav .nav-link');
         var minusSpace = $('.page-header .navbar-nav').outerHeight();
         var easing = "easeOutBack";
-        var timer = 2222;
 
         // Scroll Animation Function
         function scrollAnim(link, space, dur, ease) {
@@ -97,7 +110,7 @@
                     .siblings()
                     .removeClass('active');
                 // call the scrollAnim function
-                scrollAnim(this, minusSpace, timer, easing);
+                scrollAnim(this, minusSpace, 1234, easing);
             })
         // Window Scroll
         $(window).on('scroll', function () {
@@ -121,14 +134,6 @@
             })
 
         })
-
-        // Trigger Icon Button when click menu link
-        scrollLink.on('click', function () {
-            $("#navbarNav").trigger("click");
-        })
     }
-
-    // Hover dir
-    $(".snake_dir").snakeify({speed: 300})
 
 })(jQuery); // End of use strict
