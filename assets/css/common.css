@@ -24,6 +24,11 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus,
+button:focus {
+    outline: 0;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -75,7 +80,7 @@ h6 {
 }
 
 button.navbar-toggler:focus {
-    outline-color: var(--primary-color);
+    outline: auto var(--primary-color);
 }
 
 /* =================== Common Class =================== */

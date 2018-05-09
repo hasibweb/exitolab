@@ -31,13 +31,6 @@
 
     // Window Scroll Function
     $(window).on('scroll', function () {
-        var top = $(window).scrollTop();
-
-        if (top >= 150) {
-            $('.page-header .navbar').addClass('sticky');
-        } else {
-            $('.page-header .navbar').removeClass('sticky');
-        }
 
     });
 
@@ -52,13 +45,26 @@
     // ========================== Navbar ==========================
     function navbar() {
         // Trigger Icon Button when click menu link
-        if ($(window).width() < 992) {
+        if (!$('.page-header .navbar-toggler').hasClass('collapsed')) {
 
             $('.page-header .navbar-nav .nav-link')
                 .on('click', function () {
                     $(".page-header .navbar-toggler-icon").trigger("click");
                 })
         }
+
+        // Sticky Navbar
+        $(window).on('scroll', function () {
+            var top = $(window).scrollTop();
+
+            if (top >= 150) {
+                $('.page-header .navbar').addClass('sticky');
+            } else {
+                $('.page-header .navbar').removeClass('sticky');
+            }
+
+        });
+
     }
     // ========================== Animations ==========================
     function animations() {
@@ -72,6 +78,11 @@
 
         // Magnific Popup
         $('.m-popup').magnificPopup({
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
             type: 'image'
         });
 
