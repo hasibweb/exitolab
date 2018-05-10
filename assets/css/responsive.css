@@ -21,6 +21,7 @@
     }
     .page-header .navbar-nav .nav-item .nav-link {
         position: relative;
+        color: #fff;
     }
     .page-header .navbar-nav .nav-item .nav-link::before {
         content: '';
@@ -50,7 +51,7 @@
         width: 100px;
     }
     .page-header .navbar-nav .nav-item.active .nav-link {
-        color: #fff;
+        color: var(--primary-color);
         font-weight: bold;
     }
     .about-blocks figure {

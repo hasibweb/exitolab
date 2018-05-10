@@ -9,15 +9,25 @@
     padding: 17px;
 }
 
+.page-header .navbar .nav-link:hover,
+.page-header .navbar.sticky .nav-link:hover {
+    color: var(--primary-color);
+}
+
 .page-header .navbar .nav-item.active .nav-link {
     color: var(--primary-color);
     font-weight: bold;
 }
 
 .page-header .navbar.sticky {
-    background: rgba(0, 0, 0, 0.7);
+    background: #fff;
+    box-shadow: 0 0 25px 0px #ccc;
     transition: .2s ease-in-out;
     margin-top: 0;
+}
+
+.page-header .navbar.sticky .nav-link {
+    color: #333;
 }
 
 /* ======= Hero Area ======= */
