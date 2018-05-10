@@ -22,16 +22,18 @@
     $(document).ready(function () {
         pluginsActivation();
         servicesFilter();
-        scrollSpy();
         navbar();
     });
 
     // Window Resize Function
-    $(window).on('resize', function () {});
+    $(window).on('resize', function () {
+        navbar();
+    });
 
     // Window Scroll Function
     $(window).on('scroll', function () {
-
+        scrollSpy();
+        stickyNav();
     });
 
     // ========================== preloaderSetup ==========================
@@ -48,6 +50,16 @@
         AOS.init({
             offset: 50
         });
+
+        // Smooth Scroll       
+        var navHeight = $('.page-header .navbar-nav').outerHeight();
+        $('body').smoothScroll({
+            delegateSelector: '#navbarNav .nav-link, .hero-mouse',
+            offset: -navHeight,
+            easing: "easeOutBack",
+            speed: 1234
+        });
+
         // Hover Direction Change
         $(".snake_dir").snakeify({
             speed: 300
@@ -65,7 +77,6 @@
 
         // Change Scrollbar Color
         var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
-        // console.log(color)
         $("body").niceScroll({
             cursorcolor: color,
             cursorwidth: "8px",
@@ -86,21 +97,19 @@
                     $(".page-header .navbar-toggler-icon").trigger("click");
                 })
         }
-
-        // Sticky Navbar
-        $(window).on('scroll', function () {
-            var top = $(window).scrollTop();
-
-            if (top >= 150) {
-                $('.page-header .navbar').addClass('sticky');
-            } else {
-                $('.page-header .navbar').removeClass('sticky');
-            }
-
-        });
-
     }
 
+    // ========================== Sticky Nav ==========================
+
+    function stickyNav() {
+        var top = $(window).scrollTop();
+
+        if (top >= 150) {
+            $('.page-header .navbar').addClass('sticky');
+        } else {
+            $('.page-header .navbar').removeClass('sticky');
+        }
+    }
 
     // ========================== Services Filter ==========================
     function servicesFilter() {
@@ -122,60 +131,32 @@
     }
 
     // ========================== ScrollSpy ==========================
+
     function scrollSpy() {
         var scrollLink = $('.page-header .navbar-nav .nav-link');
         var minusSpace = $('.page-header .navbar-nav').outerHeight();
-        var easing = "easeOutBack";
 
         // Scroll Animation Function
-        function scrollAnim(link, space, dur, ease) {
-            $('html, body').animate({
-                scrollTop: $(link.hash)
+        // Window Scroll        
+        var topPos = $(window).scrollTop();
+        scrollLink.each(function () {
+            var section = $(this.hash);
+            // This Line Immportant for Console Error
+            if (section.length) {
+                var secPos = section
                     .offset()
-                    .top - space
-            }, dur, ease)
-        }
-
-        // Fire when click
-        scrollLink
-            .on('click', function (e) {
-                e.preventDefault;
+                    .top - minusSpace;
+            }
+            // Add Active Class
+            if (secPos <= topPos) {
                 $(this)
                     .parent()
                     .addClass('active')
                     .siblings()
                     .removeClass('active');
-                // call the scrollAnim function
-                scrollAnim(this, minusSpace, 1234, easing);
-            })
-        // Fire when Mouse button click
-        $('.hero-mouse').on('click', function (e) {
-            e.preventDefault;
-            // call the scrollAnim function
-            scrollAnim(this, minusSpace, 2234, 'easeOutQuint');
+            }
         })
-        // Window Scroll
-        $(window).on('scroll', function () {
-            var topPos = $(window).scrollTop();
-            scrollLink.each(function () {
-                var section = $(this.hash);
-                // This Line Immportant for Console Error
-                if (section.length) {
-                    var secPos = section
-                        .offset()
-                        .top - minusSpace;
-                }
-                // Add Active Class
-                if (secPos <= topPos) {
-                    $(this)
-                        .parent()
-                        .addClass('active')
-                        .siblings()
-                        .removeClass('active');
-                }
-            })
 
-        })
     }
 
 })(jQuery); // End of use strict
