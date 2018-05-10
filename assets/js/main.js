@@ -79,7 +79,7 @@
         var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
         $("body").niceScroll({
             cursorcolor: color,
-            cursorwidth: "8px",
+            cursorwidth: "5px",
             cursorborder: '0',
             scrollspeed: 180,
             bouncescroll: true
