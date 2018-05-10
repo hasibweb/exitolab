@@ -3,7 +3,7 @@
     /* ==================== Table Of Content ====================
     1.	Script Initialization
     2.	preloaderSetup
-    3.	Mobile Menu
+    3.	Plugins Activations
     4.  Hero Slider
     5.  Services Filter
     6. Testimonials Slider

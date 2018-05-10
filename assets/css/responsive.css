@@ -43,8 +43,11 @@
         transform: translateX(-50%);
         transition: .2s ease-in-out;
     }
+    .page-header .navbar-nav .nav-item.active .nav-link::after {
+        width: 100px;
+    }
     .page-header .navbar-nav .nav-item .nav-link:hover::after {
-        width: 40px;
+        width: 100px;
     }
     .page-header .navbar-nav .nav-item.active .nav-link {
         color: #fff;
