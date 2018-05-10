@@ -23,6 +23,7 @@
         pluginsActivation();
         servicesFilter();
         navbar();
+        testimonialArea();
     });
 
     // Window Resize Function
@@ -47,11 +48,9 @@
     // ========================== Plugins Activations ==========================
     function pluginsActivation() {
         // Scroll Animation
-        AOS.init({
-            offset: 50
-        });
+        AOS.init({offset: 50});
 
-        // Smooth Scroll       
+        // Smooth Scroll
         var navHeight = $('.page-header .navbar-nav').outerHeight();
         $('body').smoothScroll({
             delegateSelector: '#navbarNav .nav-link, .hero-mouse',
@@ -61,9 +60,7 @@
         });
 
         // Hover Direction Change
-        $(".snake_dir").snakeify({
-            speed: 300
-        });
+        $(".snake_dir").snakeify({speed: 300});
 
         // Magnific Popup
         $('.m-popup').magnificPopup({
@@ -77,13 +74,7 @@
 
         // Change Scrollbar Color
         var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
-        $("body").niceScroll({
-            cursorcolor: color,
-            cursorwidth: "5px",
-            cursorborder: '0',
-            scrollspeed: 180,
-            bouncescroll: true
-        });
+        $("body").niceScroll({cursorcolor: color, cursorwidth: "5px", cursorborder: '0', scrollspeed: 180, bouncescroll: true});
 
     }
 
@@ -120,9 +111,7 @@
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({
-                filter: filterValue
-            });
+            $grid.isotope({filter: filterValue});
             $(this)
                 .addClass('active')
                 .siblings()
@@ -136,8 +125,7 @@
         var scrollLink = $('.page-header .navbar-nav .nav-link');
         var minusSpace = $('.page-header .navbar-nav').outerHeight();
 
-        // Scroll Animation Function
-        // Window Scroll        
+        // Scroll Animation Function Window Scroll
         var topPos = $(window).scrollTop();
         scrollLink.each(function () {
             var section = $(this.hash);
@@ -157,6 +145,10 @@
             }
         })
 
+    }
+    // ========================== Testimonial Area ==========================
+    function testimonialArea() {
+        $('.test-slider-init').slick({prevArrow: '<button type="button" class="slick-prev"><</button>', nextArrow: '<button type="button" class="slick-next">></button>', autoplay: true, autoplaySpeed: 4000, speed: 1200})
     }
 
 })(jQuery); // End of use strict
