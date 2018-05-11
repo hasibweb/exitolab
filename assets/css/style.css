@@ -419,3 +419,69 @@
     display: flex;
     justify-content: center;
 }
+
+.blog-masonry-init .masonry-item figcaption>a span {
+    display: inline-block;
+    position: relative;
+    padding-right: 15px;
+}
+
+.blog-masonry-init .masonry-item figcaption>a span::before {
+    content: '\f105';
+    font-family: 'fontAwesome';
+    position: absolute;
+    right: 0;
+    transition: .2s ease-in-out;
+}
+
+.blog-masonry-init .masonry-item figcaption>a:hover {
+    color: #fff;
+}
+
+.blog-masonry-init .masonry-item figcaption>a:hover span::before {
+    transform: translateX(10px)
+}
+
+/* ============================= Contact Us =========================== */
+
+#contact_us {
+    padding: 50px 0;
+}
+
+.contact-info {
+    background: var(--secondary-color);
+}
+
+.contact-info .google-map {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#contact-form {
+    padding: 50px 25px;
+}
+
+#contact-form .form-control {
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #cecece;
+    margin-bottom: 40px;
+    padding: 10px;
+}
+
+#contact-form .form-group:focus {
+    outline: 0;
+}
+
+#contact-form .form-control:focus {
+    border-bottom-color: var(--primary-color);
+    outline: 0;
+}
+
+#contact-form textarea[name="message"] {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
