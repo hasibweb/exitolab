@@ -88,6 +88,12 @@
     h1 {
         font-size: 40px;
     }
+    h4 {
+        font-size: 23px;
+    }
+    .section-title {
+        font-size: 34px;
+    }
 }
 
 /* ========== Mobile Device ========== */
@@ -112,6 +118,12 @@
     /* Filter Item width */
     .filter-grid .filter-item {
         width: 33.333%;
+    }
+    .testimonial-area .counter-up .counter {
+        font-size: 60px;
+    }
+    .testimonial-area .counter-up>p {
+        font-size: 14px;
     }
 }
 

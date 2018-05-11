@@ -198,8 +198,13 @@
     width: 100%;
 }
 
+.filter-grid .filter-item {
+    text-align: center;
+}
+
 .filter-grid .filter-item figure {
     margin-bottom: 0;
+    display: inline-block;
 }
 
 .portfolio-filter .filter-button-group {
@@ -345,7 +350,7 @@
 }
 
 .testimonial-area .counter-up .counter {
-    font-size: 60px;
+    font-size: 50px;
     color: var(--primary-color);
     font-weight: bold;
 }
@@ -362,8 +367,44 @@
     margin-top: 40px;
 }
 
+.team-block .overlay .fa:hover {
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
 /* ====================== Why Chose Us ========================== */
 
 .why-chose-us {
     padding: 50px 0;
+}
+
+/* ====================== Our Pricing ========================== */
+
+#our_pricing {
+    padding: 50px 0;
+}
+
+.single-price {
+    background: var(--secondary-color);
+    transition: .2s ease-in;
+}
+
+.single-price:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-30px);
+}
+
+.single-price a {
+    display: block;
+    padding: 10px;
+    background: transparent;
+    color: #000;
+    font-weight: bold;
+    border: 2px solid #111
+}
+
+.single-price:hover a {
+    color: #fff;
+    border-color: #fff;
 }
