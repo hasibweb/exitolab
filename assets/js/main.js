@@ -48,7 +48,11 @@
     // ========================== Plugins Activations ==========================
     function pluginsActivation() {
         // Scroll Animation
-        AOS.init({offset: 50});
+        AOS.init({
+            offset: 50,
+            duration: 500,
+            easing: 'ease-in-sine'
+        });
 
         // Smooth Scroll
         var navHeight = $('.page-header .navbar-nav').outerHeight();
@@ -60,7 +64,9 @@
         });
 
         // Hover Direction Change
-        $(".snake_dir").snakeify({speed: 300});
+        $(".snake_dir").snakeify({
+            speed: 300
+        });
 
         // Magnific Popup
         $('.m-popup').magnificPopup({
@@ -74,7 +80,19 @@
 
         // Change Scrollbar Color
         var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
-        $("body").niceScroll({cursorcolor: color, cursorwidth: "5px", cursorborder: '0', scrollspeed: 180, bouncescroll: true});
+        $("body").niceScroll({
+            cursorcolor: color,
+            cursorwidth: "5px",
+            cursorborder: '0',
+            scrollspeed: 180,
+            bouncescroll: true
+        });
+
+        // Counter Up Plugin
+        $('.counter').counterUp({
+            delay: 100,
+            time: 3000
+        });
 
     }
 
@@ -111,7 +129,9 @@
         // filter items on button click
         $('.filter-button-group').on('click', 'button', function () {
             var filterValue = $(this).attr('data-filter');
-            $grid.isotope({filter: filterValue});
+            $grid.isotope({
+                filter: filterValue
+            });
             $(this)
                 .addClass('active')
                 .siblings()
@@ -148,7 +168,13 @@
     }
     // ========================== Testimonial Area ==========================
     function testimonialArea() {
-        $('.test-slider-init').slick({prevArrow: '<button type="button" class="slick-prev"><</button>', nextArrow: '<button type="button" class="slick-next">></button>', autoplay: true, autoplaySpeed: 4000, speed: 1200})
+        $('.test-slider-init').slick({
+            prevArrow: '<button type="button" class="slick-prev"><</button>',
+            nextArrow: '<button type="button" class="slick-next">></button>',
+            autoplay: false,
+            autoplaySpeed: 4000,
+            speed: 1000
+        })
     }
 
 })(jQuery); // End of use strict

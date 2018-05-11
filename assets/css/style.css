@@ -331,6 +331,11 @@
     cursor: pointer;
     padding: 1rem;
     z-index: 9;
+    transition: .3s ease-in-out;
+}
+
+.testimonial-area .slick-arrow:hover {
+    background: var(--primary-color);
 }
 
 .testimonial-area .slick-prev.slick-arrow {
@@ -339,4 +344,21 @@
 
 .testimonial-area .slick-next.slick-arrow {
     right: 0;
+}
+
+/* Counter UP */
+
+.testimonial-area .counter-up {
+    text-align: center;
+}
+
+.testimonial-area .counter-up .counter {
+    font-size: 60px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.testimonial-area .counter-up>p {
+    font-size: 18px;
+    color: #fff;
 }
