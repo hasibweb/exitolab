@@ -85,6 +85,15 @@ button.navbar-toggler:focus {
 
 /* =================== Common Class =================== */
 
+.fa {
+    font-size: 15px;
+    transition: .1s ease-in;
+}
+
+.fa:hover {
+    transform: scale(1.3);
+}
+
 /* Text style */
 
 .text-black {
@@ -131,33 +140,32 @@ button.navbar-toggler:focus {
     left: 0;
 }
 
-/* ========= Mobile Menu ======== */
+/* ========= Hover Direction ======== */
 
-.mobile-menu-slide {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    z-index: 9999;
-    background: rebeccapurple;
-    transition: .3s ease-in-out;
-    overflow-y: scroll;
+.snake_dir {
+    position: relative;
+    overflow: hidden;
 }
 
-.mobile-menu-slide.show {
+.snake_dir .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
 }
 
-.mobile-menu-icon {
-    cursor: pointer;
+.snake_dir .overlay>* {
+    position: relative;
 }
 
-.mobile-menu-icon span {
-    position: relative;
-    width: 40px;
-    height: 1px;
-    background: #fff;
-    display: block;
-    margin-top: 8px;
+.snake_dir .overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--primary-color);
+    opacity: 0.87;
 }

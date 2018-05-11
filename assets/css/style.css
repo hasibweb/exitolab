@@ -169,18 +169,10 @@
 
 /* Service block */
 
-/* .services-blocks .s-block {
-    border-right: 1px solid #e3e3e3;
-} */
-
 .services-blocks .s-block {
     border-bottom: 1px solid #e3e3e3;
     transition: .2s ease-in-out;
 }
-
-/* .services-blocks .s-block:first-child {
-    border-right: 0 !important;
-} */
 
 .services-blocks .s-block.color {
     background: var(--primary-color);
@@ -361,4 +353,17 @@
 .testimonial-area .counter-up>p {
     font-size: 18px;
     color: #fff;
+}
+
+/* ====================== Our Team ========================== */
+
+#our_team {
+    padding: 50px 0;
+    margin-top: 40px;
+}
+
+/* ====================== Why Chose Us ========================== */
+
+.why-chose-us {
+    padding: 50px 0;
 }
