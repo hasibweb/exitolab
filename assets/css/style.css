@@ -408,3 +408,14 @@
     color: #fff;
     border-color: #fff;
 }
+
+/* =================== Blog Area ========================== */
+
+.blogs-area {
+    padding: 50px 0;
+}
+
+.blog-masonry-init .masonry-item {
+    display: flex;
+    justify-content: center;
+}
