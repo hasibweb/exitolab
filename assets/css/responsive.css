@@ -82,9 +82,6 @@
     .portfolio-filter .filter-button-group button:not(:last-child) {
         margin-right: 0px;
     }
-    .hero-mouse {
-        bottom: 40px;
-    }
 }
 
 /* ========== Extra Small and Down ========== */
@@ -99,6 +96,9 @@
     }
     .section-title {
         font-size: 34px;
+    }
+    .hero-mouse {
+        bottom: 40px;
     }
 }
 
