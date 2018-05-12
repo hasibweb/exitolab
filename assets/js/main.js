@@ -15,7 +15,7 @@
     // Window Load Function
     $(window).on('load', function () {
         preloaderSetup();
-        AOS.init({offset: 50});
+        AOS.init({offset: 100});
     });
 
     // Document Ready Function
