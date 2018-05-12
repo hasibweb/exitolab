@@ -4,9 +4,12 @@
     1.	Script Initialization
     2.	preloaderSetup
     3.	Plugins Activations
-    4.  Hero Slider
-    5.  Services Filter
-    6. Testimonials Slider
+    4.  Navbar
+    5.  Sticky Nav
+    6.  Services Filter
+    7.  ScrollSpy
+    8.  Testimonial Area
+    9.
     ===========================================================*/
     /* ================================================
        Script Initialization
@@ -94,6 +97,16 @@
                     $(".page-header .navbar-toggler-icon").trigger("click");
                 })
         }
+
+        // Toggle class
+        $('.page-header .navbar-nav .nav-link')
+            .on('click', function () {
+                $(this)
+                    .parent()
+                    .addClass('active')
+                    .siblings()
+                    .removeClass('active');
+            })
     }
 
     // ========================== Sticky Nav ==========================
