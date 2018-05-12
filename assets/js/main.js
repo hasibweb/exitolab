@@ -47,8 +47,6 @@
 
     // ========================== Plugins Activations ==========================
     function pluginsActivation() {
-        // Scroll Animation
-        AOS.init({offset: 50, duration: 500, easing: 'ease-in-sine'});
 
         // Smooth Scroll
         var navHeight = $('.page-header .navbar-nav').outerHeight();
@@ -74,12 +72,12 @@
 
         // Change Scrollbar Color
         var color = getComputedStyle(document.body).getPropertyValue('--primary-color');
-        $("body").niceScroll({cursorcolor: color, cursorwidth: "5px", cursorborder: '0', scrollspeed: 180, bouncescroll: true});
+        $("body").niceScroll({cursorcolor: color, cursorwidth: "6px", cursorborder: '0', scrollspeed: 180, bouncescroll: true});
 
         // Counter Up Plugin
         $('.counter').counterUp({delay: 100, time: 3000});
 
-        // Masonry
+        // Masonry Grid
         $('.blog-masonry-init').isotope({itemSelector: '.masonry-item', percentPosition: true, masonry: {}})
 
     }
