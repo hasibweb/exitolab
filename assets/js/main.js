@@ -15,7 +15,7 @@
     // Window Load Function
     $(window).on('load', function () {
         preloaderSetup();
-
+        AOS.init({offset: 50});
     });
 
     // Document Ready Function
@@ -47,8 +47,7 @@
 
     // ========================== Plugins Activations ==========================
     function pluginsActivation() {
-
-        // Smooth Scroll
+        // Scroll Animations Smooth Scroll
         var navHeight = $('.page-header .navbar-nav').outerHeight();
         $('body').smoothScroll({
             delegateSelector: '#navbarNav .nav-link, .hero-mouse',
