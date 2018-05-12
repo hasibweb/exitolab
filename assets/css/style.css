@@ -21,7 +21,10 @@
 
 .page-header .navbar.sticky {
     background: #fff;
+    -webkit-box-shadow: 0 0 25px 0px #ccc;
     box-shadow: 0 0 25px 0px #ccc;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
     margin-top: 0;
 }
@@ -74,7 +77,9 @@
     border-radius: 50%;
     display: inline-block;
     position: relative;
+    -webkit-animation: bounce 1s infinite;
     animation: bounce 1s infinite;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
 
@@ -84,26 +89,54 @@
     border: 2px solid var(--primary-color);
     display: inline-block;
     border-radius: 50%;
+    -webkit-animation: rotates 1s infinite;
     animation: rotates 1s infinite;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
 
 /* Bounce Animation */
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
     from {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
     to {
+        -webkit-transform: translateY(25px);
         transform: translateY(25px);
+    }
+}
+
+@keyframes bounce {
+    from {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    to {
+        -webkit-transform: translateY(25px);
+        transform: translateY(25px);
+    }
+}
+
+@-webkit-keyframes rotates {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    to {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(720deg);
     }
 }
 
 @keyframes rotates {
     from {
+        -webkit-transform: rotate(0);
         transform: rotate(0);
     }
     to {
+        -webkit-transform: rotate(720deg);
         transform: rotate(720deg);
     }
 }
@@ -123,6 +156,8 @@
     text-align: center;
     border: 1px solid #e3e3e3;
     padding: 60px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
 
@@ -138,6 +173,7 @@
 /* Hover */
 
 .about-blocks figure:hover {
+    -webkit-box-shadow: 0 10px 30px -1px #ddd;
     box-shadow: 0 10px 30px -1px #ddd;
 }
 
@@ -154,6 +190,8 @@
 .services-blocks figure {
     text-align: center;
     padding: 60px 0px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
 
@@ -171,18 +209,22 @@
 
 .services-blocks .s-block {
     border-bottom: 1px solid #e3e3e3;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
 
 .services-blocks .s-block.color {
     background: var(--primary-color);
     color: #fff;
+    -webkit-box-shadow: 0 10px 30px 2px #ddd;
     box-shadow: 0 10px 30px 2px #ddd;
 }
 
 /* Hover */
 
 .services-blocks .s-block:hover {
+    -webkit-box-shadow: 0 10px 30px -1px #ddd;
     box-shadow: 0 10px 30px -1px #ddd
 }
 
@@ -193,7 +235,10 @@
 }
 
 .filter-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%;
 }
@@ -208,10 +253,15 @@
 }
 
 .portfolio-filter .filter-button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 80px auto;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -267,6 +317,8 @@
     top: 0;
     left: 0;
     opacity: 0.8;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
     transition: .2s ease;
 }
 
@@ -288,6 +340,7 @@
 
 .portfolio-filter .filter-item figure figcaption a:hover {
     color: #fff;
+    -webkit-box-shadow: 0 0 5px 0px #eee;
     box-shadow: 0 0 5px 0px #eee;
 }
 
@@ -320,6 +373,8 @@
 .testimonial-area .slick-arrow {
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     background: transparent;
     border: 0;
@@ -328,6 +383,8 @@
     cursor: pointer;
     padding: 1rem;
     z-index: 9;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
@@ -369,6 +426,7 @@
 
 .team-block .overlay .fa:hover {
     color: #fff;
+    -webkit-box-shadow: 0px 0px 10px 0px #ccc;
     box-shadow: 0px 0px 10px 0px #ccc;
 }
 
@@ -386,12 +444,16 @@
 
 .single-price {
     background: var(--secondary-color);
+    -webkit-transition: .2s ease-in;
+    -o-transition: .2s ease-in;
     transition: .2s ease-in;
 }
 
 .single-price:hover {
     background: var(--primary-color);
     color: #fff;
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
     transform: translateY(-30px);
 }
 
@@ -416,7 +478,11 @@
 }
 
 .blog-masonry-init .masonry-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -431,6 +497,8 @@
     font-family: 'fontAwesome';
     position: absolute;
     right: 0;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
 }
 
@@ -439,6 +507,8 @@
 }
 
 .blog-masonry-init .masonry-item figcaption>a:hover span::before {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
     transform: translateX(10px)
 }
 
