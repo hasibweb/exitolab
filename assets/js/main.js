@@ -98,15 +98,6 @@
                 })
         }
 
-        // Toggle class
-        $('.page-header .navbar-nav .nav-link')
-            .on('click', function () {
-                $(this)
-                    .parent()
-                    .addClass('active')
-                    .siblings()
-                    .removeClass('active');
-            })
     }
 
     // ========================== Sticky Nav ==========================
@@ -152,7 +143,7 @@
             if (section.length) {
                 var secPos = section
                     .offset()
-                    .top - minusSpace;
+                    .top - (minusSpace + 10);
             }
             // Add Active Class
             if (secPos <= topPos) {
